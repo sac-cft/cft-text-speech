@@ -11,7 +11,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #5256AD;
+  background: black;
 }
 ::selection{
   color: #fff;
@@ -209,3 +209,37 @@ form button:hover{
   gap: 20px;
 }
 
+/* Start Button Style */
+.start-button {
+  border-radius: 1rem;
+  font-weight: bolder;
+  margin: 50px;
+  width: 10rem;
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around the button */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor style */
+  font-size: 16px; /* Font size */
+}
+
+/* Stop Button Style */
+.stop-button {
+  border-radius: 1rem;
+  font-weight: bolder;
+  width: 10rem;
+  background-color: #FF0000; /* Red background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around the button */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor style */
+  font-size: 16px; /* Font size */
+}
+
+#voiceData{
+  position: absolute;
+  top: 15%;
+  width: 30rem;
+  padding: 100px;
+  font-weight: bolder;
+}
