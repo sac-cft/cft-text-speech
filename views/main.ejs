@@ -6,11 +6,12 @@
   <title>Text To Speech in JavaScript</title>
   <link rel="stylesheet" href="../public/css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <script src="/socket.io/socket.io.js"></script>
 </head>
 
 <body>
-  <button id="play-button">Play</button>
+  <!-- <button id="play-button">Play</button> -->
+  <audio id="myAudio" src=""></audio>
   <!-- <div class="wrapper">
       <header>Text To Speech</header>
       <form action="#">
@@ -18,12 +19,12 @@
           <label>Enter Text</label>
           <textarea ></textarea>
         </div> -->
-        <div class="row">
+        <!-- <div class="row">
           <label>Select Voice</label>
           <div class="outer">
             <select></select>
           </div>
-        </div>
+        </div> -->
         <!-- 
         <button>Convert To Speech</button>
       </form>
