@@ -7,6 +7,7 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
+const perf = require('execution-time')();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -69,30 +70,30 @@ app.post('/get-data', async (req, res) => {
   
 // Example usage
 // const prompt = "Who is Virat Kohli?";
-try {
-  const { messages } = {
-    "messages": [
-      { "role": "system", "content": "You are a helpful assistant." },
-      { "role": "system", "content": "Provide a short answer." },
-      { "role": "user", "content":`${req.body.prompt}` }
-    ]
-  };
+// try {
+//   const { messages } = {
+//     "messages": [
+//       { "role": "system", "content": "You are a helpful assistant." },
+//       { "role": "system", "content": "Provide a short answer." },
+//       { "role": "user", "content":`${req.body.prompt}` }
+//     ]
+//   };
 
-  const completion = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages: messages,
-    // max_tokens: 50,
-    temperature: 0.7
-  });
+//   const completion = await openai.createChatCompletion({
+//     model: 'gpt-3.5-turbo',
+//     messages: messages,
+//     // max_tokens: 50,
+//     temperature: 0.7
+//   });
 
-  const response = completion.data.choices[0].message;
-  console.log(response.content);
-  let result = response.content
-  res.json({ result });
-} catch (error) {
-  console.error('Error:', error.message);
-  res.status(500).json({ error: 'Something went wrong' });
-}
+//   const response = completion.data.choices[0].message;
+//   console.log(response.content);
+//   let result = response.content
+//   res.json({ result });
+// } catch (error) {
+//   console.error('Error:', error.message);
+//   res.status(500).json({ error: 'Something went wrong' });
+// }
 
   // const prompt = req.body.prompt; // Assuming prompt is available in the request body
   // const endpoint = 'https://api.openai.com/v1/engines/davinci/completions';
