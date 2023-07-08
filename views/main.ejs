@@ -64,10 +64,17 @@
           <p>Download</p>
         </button>
       </div>
-    </div> -->
-    <textarea id="voiceData"></textarea>
-    <button id="startButton" class="start-button">Start</button> <br>
-    <button id="stopButton" class="stop-button">Stop</button>
+    </div> -->  
+    <h1  id="first">Nebula</h1>
+    <h1 style="display: none;" id="second">Nebula listening......</h1>
+    <h1 style="display: none;" id="third">Nebula thinking......</h1>
+    <h1 style="display: none;" id="four">Nebula speaking......</h1>
+    <video id="default" onclick="startRecording()" src="../public/videos/bg.mp4" muted ></video>
+    <video onclick="stopRecording()" style="display: none;" id="bg" src="../public/videos/bg.mp4" muted autoplay loop></video>
+    <textarea id="voiceData"> 
+    </textarea>
+    <!-- <button id="startButton" class="start-button">Start</button> <br>
+    <button id="stopButton" class="stop-button">Stop</button> -->
     
   </div>
 
