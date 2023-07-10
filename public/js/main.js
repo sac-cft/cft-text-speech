@@ -19,7 +19,7 @@ socket.on('play', (e) => {
   document.getElementById("four").style.display = 'block'
   document.getElementById("voiceData").value = '';
   audio.src = ''
-  audio.src = `../public/${e}.mp3`
+  audio.src = `../public/videos/${e}.mp3`
   audio.play();
 })
 

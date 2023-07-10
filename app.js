@@ -73,7 +73,7 @@ app.post('/get-data', async (req, res) => {
       var fileName = ''
       var num = ''
       num = Date.now()
-      fileName = `./public/${num}.mp3`
+      fileName = `./public/videos/${num}.mp3`
       const writeStream = fs.createWriteStream(fileName);
       res.pipe(writeStream);
       writeStream.on('finish', () => {
