@@ -39,7 +39,7 @@ const sendPrompt = async (prompt) => {
   let data = {
     prompt: prompt
   }
-  fetch('http://localhost:4000/get-data', {
+  fetch('https://goldfish-app-8b6mh.ondigitalocean.app/get-data', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

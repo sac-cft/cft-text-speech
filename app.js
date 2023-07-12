@@ -20,7 +20,7 @@ const voiceID = '21m00Tcm4TlvDq8ikWAM';            // The ID of the voice you wa
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.json({ extended: true, limit: '50mb' }));
+app.use(express.json({ extended: true, limit: '50mb' }));  
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use("/public", express.static(path.join(__dirname, "public")));
 
